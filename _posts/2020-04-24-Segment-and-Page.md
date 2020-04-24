@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 操作系统原理: 分页和分段
+title: 操作系统原理-分页和分段(Page and Segment)
 description: 今天复习到硬件安全的内容, 记录一下有关内容以免遗忘了
 ---
 
