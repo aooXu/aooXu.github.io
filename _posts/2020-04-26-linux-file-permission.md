@@ -4,11 +4,11 @@ title: 计算机安全-Unix的访问控制的基本概念
 description: 今天看到课件里面说Unix文件系统中每个文件的权限都用一个10位String来表述, 有些没搞懂到底是什么意思, 所以写了这篇文章.
 ---
 
-# 1. DAC
+# 1. 什么是DAC
 
 DAC指自决定权限控制(Discretionary Access Control), 是一种访问控制模式(Access Control Pattern). 在这种模式中主体(Principals)对于某个资源(resources)的权限不由系统决定而是由资源的创建者决定. 
 
-# 2. Unix
+# 2. 在Unix中的Access Control
 
 ## 2.1 Overview
 
@@ -16,7 +16,7 @@ Unix文件系统就采取了这种访问控制模式.
 其中主体对于资源都存在三种可能的行为: `read`, `write`和`execute`. 
 而可能的资源包括目录和文件(directories and files), 进程(processes), 设备和管道(devices and named pipes).  
 
-## 2.2 解释对每种资源的权限
+## 2.2 对每种资源的权限的解释
 
 ### 2.2.1 Files
 
@@ -39,9 +39,9 @@ Unix文件系统就采取了这种访问控制模式.
 * Read and Write: 和文件一样,
 * Exe: 没有实际含义. 
 
-# 3. 在常见Linux指令中
+# 3. 在常见Linux指令中的运用
 
-# 3.1 ls -l 
+## 3.1 ls -l 
 
 ls -l 输出的结果是一个10位的String, 这个字符串的第一位是分隔符'-', 没有实际含义, 第2-4位表示创建者的权限, 第5-7位表示和创建者同一用户组的用户的权限, 第8-10位表示其他用户的权限. 例如如果输出的结果是`-rwxr-x---` 
 * 第一个`-`没有实际含义
@@ -49,6 +49,6 @@ ls -l 输出的结果是一个10位的String, 这个字符串的第一位是分�
 * 第5-7位`r-x`表示创造者所处的用户组的权限是`r`ead, 和e`x`ecute
 * 最后三位`---`表示其他人没有权限
 
-# 3.2 Chmod
+## 3.2 Chmod
 
 例如`chmod file 775`因为存在三种可能的操作, `read`, `write`和`execute`所以我们可以用三位二进制数字表示给予哪几种权限, 所以十进制的**7**就是二进制的**111**, 十进制的**5**就是二进制的**101**
