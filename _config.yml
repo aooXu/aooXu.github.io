@@ -6,6 +6,8 @@ twitter:
   username: yourusername
   card: summary
 
+markdown: kramdown
+
 permalink: pretty
 
 paginate:            1000
