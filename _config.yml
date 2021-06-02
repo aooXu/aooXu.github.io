@@ -1,12 +1,12 @@
-site: aoo's GitHub Page
+site: YichaoXu's GitHub Page
 url: https://aooxu.github.io
-title: aoo
-description: Welcome to the personal blog of Sam!
-twitter:
-  username: yourusername
-  card: summary
+title: YichaoXu
+description: Personal Blog of Yichao Xu.
 
 markdown: kramdown
+
+kramdown:
+  input: GFM
 
 permalink: pretty
 
