@@ -1,11 +1,11 @@
 ---
 layout: page
-title: About
+title: Profile
 ---
-<div style="display:flex;"> 
+<div style="display:flex; width:100%"> 
 
-<img src="/assets/images/avator.jpg" alt="avator" style="width:150px; margin:10px" />
-<table class="tg">
+<img src="/assets/images/avator.jpg" alt="avator" style="width:20%; margin:10px"/>
+<table class="tg" style="width:75%;">
 <thead> <tr> <th class="tg-0pky"></th> <th class="tg-0pky"></th> </tr></thead>
 <tbody>
   <tr>
